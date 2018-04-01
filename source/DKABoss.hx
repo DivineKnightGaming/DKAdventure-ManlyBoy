@@ -242,9 +242,9 @@ class DKABoss extends FlxSprite
 			}
 		}
 		
-		for (i in 0...cast(FlxG.state, DKAPlayState).fireballs.length) 
+		for (i in 0...cast(FlxG.state, PlayState).fireballs.length) 
 		{
-			var fire = cast(FlxG.state, DKAPlayState).fireballs.members[i];
+			var fire = cast(FlxG.state, PlayState).fireballs.members[i];
 			
 			if (cast(fire, FlxSprite).alive && FlxCollision.pixelPerfectCheck(cast(fire, FlxSprite), cast(hero, FlxSprite)))
 			{
@@ -265,14 +265,14 @@ class DKABoss extends FlxSprite
 		if (status == BossStatus.ATTACK1 && waitTicks == 0)
 		{
 			FlxG.sound.play("assets/sounds/fire_shoot.wav", 1, false);
-			var bullet:FlxSprite = cast(cast(FlxG.state, DKAPlayState).fireballs.recycle(), FlxSprite);
+			var bullet:FlxSprite = cast(cast(FlxG.state, PlayState).fireballs.recycle(), FlxSprite);
 			bullet.loadGraphic(Reg.fireball, true, 16, 16);
 			bullet.reset(x + width / 2 - bullet.width / 2, y + height / 2 - bullet.height / 2);
 			bullet.animation.add("fire", [3,7], 4, true);	
 			bullet.animation.play("fire");
 			bullet.velocity.y = 65;
 			
-			var bullet:FlxSprite = cast(cast(FlxG.state, DKAPlayState).fireballs.recycle(), FlxSprite);
+			var bullet:FlxSprite = cast(cast(FlxG.state, PlayState).fireballs.recycle(), FlxSprite);
 			bullet.loadGraphic(Reg.fireball, true, 16, 16);
 			bullet.reset(x + width / 2 - bullet.width / 2, y + height / 2 - bullet.height / 2);
 			bullet.animation.add("fire", [3,7], 4, true);	
@@ -280,7 +280,7 @@ class DKABoss extends FlxSprite
 			bullet.velocity.y = 65;
 			bullet.velocity.x = -45;
 			
-			var bullet:FlxSprite = cast(cast(FlxG.state, DKAPlayState).fireballs.recycle(), FlxSprite);
+			var bullet:FlxSprite = cast(cast(FlxG.state, PlayState).fireballs.recycle(), FlxSprite);
 			bullet.loadGraphic(Reg.fireball, true, 16, 16);
 			bullet.reset(x + width / 2 - bullet.width / 2, y + height / 2 - bullet.height / 2);
 			bullet.animation.add("fire", [3,7], 4, true);	
@@ -291,28 +291,28 @@ class DKABoss extends FlxSprite
 		if (status == BossStatus.ATTACK2 && waitTicks == 0)
 		{
 			FlxG.sound.play("assets/sounds/fire_shoot.wav", 1, false);
-			var bullet:FlxSprite = cast(cast(FlxG.state, DKAPlayState).fireballs.recycle(), FlxSprite);
+			var bullet:FlxSprite = cast(cast(FlxG.state, PlayState).fireballs.recycle(), FlxSprite);
 			bullet.loadGraphic(Reg.fireball, true, 16, 16);
 			bullet.reset(x + width - bullet.width, y);
 			bullet.animation.add("fire", [0,4], 4, true);	
 			bullet.animation.play("fire");
 			bullet.velocity.x = 65;
 			
-			var bullet:FlxSprite = cast(cast(FlxG.state, DKAPlayState).fireballs.recycle(), FlxSprite);
+			var bullet:FlxSprite = cast(cast(FlxG.state, PlayState).fireballs.recycle(), FlxSprite);
 			bullet.loadGraphic(Reg.fireball, true, 16, 16);
 			bullet.reset(x + width - bullet.width,  y);
 			bullet.animation.add("fire", [1,5], 4, true);	
 			bullet.animation.play("fire");
 			bullet.velocity.x = -65;
 			
-			var bullet:FlxSprite = cast(cast(FlxG.state, DKAPlayState).fireballs.recycle(), FlxSprite);
+			var bullet:FlxSprite = cast(cast(FlxG.state, PlayState).fireballs.recycle(), FlxSprite);
 			bullet.loadGraphic(Reg.fireball, true, 16, 16);
 			bullet.reset(x + width - bullet.width,  y);
 			bullet.animation.add("fire", [2,6], 4, true);	
 			bullet.animation.play("fire");
 			bullet.velocity.y = -65;
 			
-			var bullet:FlxSprite = cast(cast(FlxG.state, DKAPlayState).fireballs.recycle(), FlxSprite);
+			var bullet:FlxSprite = cast(cast(FlxG.state, PlayState).fireballs.recycle(), FlxSprite);
 			bullet.loadGraphic(Reg.fireball, true, 16, 16);
 			bullet.reset(x + width - bullet.width,  y);
 			bullet.animation.add("fire", [3,7], 4, true);	

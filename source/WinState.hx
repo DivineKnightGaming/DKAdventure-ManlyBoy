@@ -48,11 +48,6 @@ class WinState extends FlxState
 		Reg.text.size = 8;
 		Reg.text.alignment = "center";
 		add(Reg.text); 
-		
-		Reg.text = new FlxText(Reg.windowX+170,Reg.windowY+86,60,"Press "+Reg.buttonY+" to pick a different game.");
-		Reg.text.size = 8;
-		Reg.text.alignment = "center";
-		add(Reg.text); 
 	}
 	
 	/**
@@ -84,24 +79,14 @@ class WinState extends FlxState
 		{
 			this.goToPlay();
 		}
-		if (FlxG.keys.anyJustPressed(["G"]) ||  ( Reg.usegamepad && _gamePad.justPressed.START))
-		{
-			this.goToGameSelect();
-		}
 		if (FlxG.keys.anyJustPressed(["ESCAPE"]) )
 		{
-			SaveScores.save();
 			System.exit(0);
 		}
 	}	
 	
-	private function goToGameSelect():Void
-	{
-		FlxG.switchState(new GameSelectState());
-	}
-	
 	private function goToPlay():Void
 	{
-		FlxG.switchState(new DKAMenuState());
+		FlxG.switchState(new MenuState());
 	}
 }

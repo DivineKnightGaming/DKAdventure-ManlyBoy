@@ -47,6 +47,10 @@ class Reg
 	
 	public static var text:FlxText;
 	public static var controlsText:FlxText;
+	public static var scoreText:FlxText;
+	public static var livesText:FlxText;
+	public static var shieldText:FlxText;
+	public static var powerText:FlxText;
 	public static var sprite:FlxSprite;
 	public static var button:FlxButton;
 	
@@ -86,9 +90,16 @@ class Reg
 	public static var health3Sp:FlxSprite;
 	public static var health4Sp:FlxSprite;
 	
+	public static var lifeWav="assets/sounds/lifepickup.wav";
+	public static var selectWav="assets/sounds/select.wav";
+	
 	public static var doors:Array<String> = ["assets/images/door_key_e.png", "assets/images/door_key_w.png", "assets/images/door_key_n.png", "assets/images/door_key_s.png",
 											"assets/images/door_monster_e.png", "assets/images/door_monster_w.png", "assets/images/door_monster_n.png", "assets/images/door_monster_s.png",
 											"assets/images/door_master_e.png","assets/images/door_master_w.png","assets/images/door_master_n.png","assets/images/door_master_s.png",];
+	
+	public static var flag="assets/images/flag.png";
+	public static var flagSp:FlxSprite;
+	public static var watchFlag:Bool;
 	
 	public static var hud="assets/images/blankhud.png";
 	public static var dialogImg="assets/images/dialog.png";

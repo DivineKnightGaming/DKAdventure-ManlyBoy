@@ -283,7 +283,7 @@ class DKAEnemy extends FlxSprite
 		}
 	}
 	
-	public function takeDamage(damage:Int,state:DKAPlayState):Void
+	public function takeDamage(damage:Int,state:PlayState):Void
 	{
 		if (health > 0)
 		{

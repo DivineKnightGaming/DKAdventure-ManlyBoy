@@ -26,7 +26,7 @@ class PlayState extends FlxState
 	public var player:DKAPlayer;
 	public var playerSword:DKASword;
 	public var boss:DKABoss;
-	private var _level:DKATiledLevel;
+	private var _level:TiledLevel;
 	private var hudCam:FlxCamera;
 	private var playerCam:FlxCamera;
 	public var enemies:FlxGroup;
@@ -63,7 +63,7 @@ class PlayState extends FlxState
 		FlxG.cameras.bgColor = 0xffacacac;
 		
 		// Load the level's tilemaps
-		_level = new DKATiledLevel("assets/data/dungeon.tmx", this);
+		_level = new TiledLevel("assets/data/dungeon.tmx", this);
 		
 		// Add tilemaps
 		add(_level.backgroundLayer);

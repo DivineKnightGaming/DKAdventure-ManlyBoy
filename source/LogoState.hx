@@ -24,7 +24,6 @@ class LogoState extends FlxState
 	override public function create():Void
 	{
 		super.create();
-		SaveScores.load();
 		
 		if(Reg.fullScreen)
 		{
@@ -86,7 +85,6 @@ class LogoState extends FlxState
 		}
 		if (FlxG.keys.anyJustPressed(["ESCAPE"]))
 		{
-			SaveScores.save();
 			System.exit(0);
 		}
 	}	

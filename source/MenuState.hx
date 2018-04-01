@@ -84,7 +84,6 @@ class MenuState extends FlxState
 		}
 		if (FlxG.keys.anyJustPressed(["ESCAPE"]))
 		{
-			SaveScores.save();
 			System.exit(0);
 		}
 	}	
